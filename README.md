@@ -2,10 +2,10 @@
 
 Shared plumbing for Connectivity's Go services. It holds only what every service does the same way. Business logic stays in the services.
 
-Part of [Connectivity](https://github.com/spr732/connectivity-platform), a mock edge-to-cloud telemetry system built for practicing production debugging.
+Part of [Connectivity](https://github.com/shubhampatel19/connectivity-platform), a mock edge-to-cloud telemetry system built for practicing production debugging.
 
 ```go
-import "github.com/spr732/connectivity-go-kit/platform"
+import "github.com/shubhampatel19/connectivity-go-kit/platform"
 ```
 
 | What | Why it's shared |

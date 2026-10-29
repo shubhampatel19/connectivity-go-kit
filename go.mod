@@ -1,4 +1,4 @@
-module github.com/spr732/connectivity-go-kit
+module github.com/shubhampatel19/connectivity-go-kit
 
 go 1.22
 
