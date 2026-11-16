@@ -19,6 +19,8 @@ import "github.com/shubhampatel19/connectivity-go-kit/platform"
 | `platform.TraceHeaders` / `ContextFromHeaders` | Trace context as key/value pairs, for Kafka record headers |
 | `platform.InjectHTTP`, `RecordError`, `TraceID` | Outgoing requests, failed spans, and the trace ID for responses or logs |
 
+See [docs/DESIGN.md](docs/DESIGN.md) for why each piece is here and how it is meant to be used.
+
 ## Tracing
 
 Every service calls `InitTracing` at startup. It always installs the W3C trace-context propagator, so a trace that starts on a device carries on through HTTP headers, the site gateway's disk queue and Kafka record headers. Spans are only exported when `OTEL_EXPORTER_OTLP_ENDPOINT` is set (cluster mode points it at Tempo); otherwise nothing is recorded, but context still passes through, so a service that doesn't export never breaks a trace.
